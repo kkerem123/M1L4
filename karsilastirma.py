@@ -23,7 +23,13 @@ async def joined(ctx, member: discord.Member):
     await ctx.send(f'{member.name} joined {discord.utils.format_dt(member.joined_at)}')
 
 @bot.command()
-async def repeat(ctx, times: int, content='türkçe'):
+async def repeat(ctx, times: int, content='panda'):
     """Repeats a message multiple times."""
+    for i in range(times):
+        await ctx.send(content)
+
+@bot.command()
+async def yardim(ctx,times:int,content="https://support.discord.com/hc/tr\n bu link sana yardımcı olacaktır."):
+    """When the user needs help this code is going to work."""
     for i in range(times):
         await ctx.send(content)
