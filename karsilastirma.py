@@ -103,14 +103,14 @@ async def dog(ctx):
 async def cevre(ctx):
     await ctx.send("çevremizi temiz tutmamız gerektiğini biliyorsunn peki her şeyden önce  daha önemli bir soru sormamız gerek:NEDEN?\n bunun cevabını öğrenmek için $neden yazabilirsin")
 
-neden=["1. Çevremiz temiz olmazsa her yerin pis koktuğu,çöplükle dolu bir gezegende yaşamak istemiyosan",
+nedenler=["1. Çevremiz temiz olmazsa her yerin pis koktuğu,çöplükle dolu bir gezegende yaşamak istemiyosan",
        "2.BU dünyada sadece senin yaşamadığını unutma"
        "3.İnsan temiz havada kendini daha iyi hisseder."]
 
 @bot.command()
 async def neden(ctx):
-    cevap=random.choice(neden)
-    await ctx.send(f"Buyur niye atıklarımızı geri dönüştürmemiz veya azaltmamız için 3 nedenden 1 tanesi:{neden}")
+    cevap=random.choice(nedenler)
+    await ctx.send(f"Buyur niye atıklarımızı geri dönüştürmemiz veya azaltmamız için 3 nedenden 1 tanesi:{cevap}")
 
 @bot.command()
 async def fikir(ctx):
