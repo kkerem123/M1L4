@@ -99,3 +99,39 @@ async def dog(ctx):
     dog_url=get_dog_image_url()
     await ctx.send(dog_url) # $dog yazdığımızda bize rastgele köpek resimleri gönderiyor(başta url gözüküyor sonra resim çıkıyor.)
 
+@bot.command()
+async def cevre(ctx):
+    await ctx.send("çevremizi temiz tutmamız gerektiğini biliyorsunn peki her şeyden önce  daha önemli bir soru sormamız gerek:NEDEN?\n bunun cevabını öğrenmek için $neden yazabilirsin")
+
+neden=["1. Çevremiz temiz olmazsa her yerin pis koktuğu,çöplükle dolu bir gezegende yaşamak istemiyosan",
+       "2.BU dünyada sadece senin yaşamadığını unutma"
+       "3.İnsan temiz havada kendini daha iyi hisseder."]
+
+@bot.command()
+async def neden(ctx):
+    cevap=random.choice(neden)
+    await ctx.send(f"Buyur niye atıklarımızı geri dönüştürmemiz veya azaltmamız için 3 nedenden 1 tanesi:{neden}")
+
+@bot.command()
+async def fikir(ctx):
+    fikirler=["yediğin yemekleri çöpe atmaktansa biyogübre olarak kullanabilirsin.",
+             "Eğer küçükken lego oynadıysan legodan yapılabilecek birçok yeni fikir keşfedebilirsin (ör: anahtarlık,telefon tutucu vb birçok fikir bulunmakta bunun için\nhttps://youtube.com/shorts/VLR1SkV9JD4?si=-OWHZmDdYUTI_HHU videosuna bakabilirsin" ]
+    cvp2=random.choice(fikirler)
+    await ctx.send(f"bir fikir:{cvp2}")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
